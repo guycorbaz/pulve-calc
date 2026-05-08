@@ -1,3 +1,18 @@
+# =============================================================================
+# Configuration par défaut — VALEURS D'EXEMPLE
+# -----------------------------------------------------------------------------
+# Les valeurs ci-dessous sont fournies à titre d'illustration (tracteur Landini
+# avec moteur Perkins A4-212 et atomiseur Ø620 mm). Elles DOIVENT être adaptées
+# à votre matériel réel avant utilisation :
+#   - tracteur : régime max, vitesses par rapport (mesurées au sol), plage PTO
+#   - pulvérisateur : nombre de buses, largeur de travail, capacité citerne
+#   - étalonnage : table pression / débit par buse propre à vos buses
+#
+# La modification se fait soit en éditant ce fichier, soit en passant par
+# l'onglet « Configuration » de l'application (qui sauvegarde dans le dossier
+# de configuration utilisateur de la plateforme).
+# =============================================================================
+
 [tracteur]
 nom = "Landini"
 moteur = "Perkins A4-212"

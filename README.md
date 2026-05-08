@@ -2,7 +2,7 @@
 
 Calculateur de pulvérisation pour atomiseur viticole / arboricole monté sur tracteur agricole. L'outil détermine, à partir d'une dose à l'hectare et d'une surface, les **rapports de boîte utilisables**, les **régimes PTO**, les **vitesses au sol** et les **pressions** correspondantes — avec alertes lorsque les paramètres sortent des plages d'étalonnage.
 
-L'application est livrée pré-configurée pour un tracteur **Landini (moteur Perkins A4-212)** équipé d'un **atomiseur Ø620 mm à 10 buses céramique**, mais toute la mécanique tracteur et l'étalonnage des buses sont **éditables** dans la configuration.
+L'application est **agnostique du matériel** : tracteur (régime moteur, vitesses par rapport, plage PTO), pulvérisateur (nombre de buses, largeur de travail, capacité citerne) et **étalonnage des buses** (table pression / débit) sont entièrement paramétrables. Le fichier livré (`config/default.toml`) contient des valeurs d'exemple à adapter à votre matériel.
 
 > Statut : projet personnel, fonctionnel. Interface en français. Testé sous Linux.
 
@@ -53,7 +53,7 @@ cargo test
 
 ## Configuration par défaut
 
-Le fichier [`config/default.toml`](config/default.toml) contient les valeurs initiales chargées au premier démarrage :
+Le fichier [`config/default.toml`](config/default.toml) contient des **valeurs d'exemple** chargées au premier démarrage. Elles décrivent un tracteur Landini équipé d'un atomiseur Ø620 mm — il s'agit d'un point de départ à **adapter à votre matériel réel** (régime max, vitesses par rapport, plage PTO, étalonnage des buses, capacité citerne…) avant toute utilisation. La configuration peut être modifiée directement dans le fichier ou via l'onglet **Configuration** de l'application.
 
 ```toml
 [tracteur]
@@ -83,7 +83,7 @@ pressions       = [10.0, 15.0, 20.0, 25.0, 30.0, 40.0, 50.0]
 debits_par_buse = [1.88, 2.15, 2.45, 2.72, 2.96, 3.37, 3.70]   # L/min
 ```
 
-Une fois lancé, l'utilisateur peut modifier ces valeurs dans l'onglet **Configuration**. Voir [`docs/USAGE.md`](docs/USAGE.md) pour une description détaillée.
+Voir [`docs/USAGE.md`](docs/USAGE.md) pour une description détaillée de chaque champ.
 
 ## Stockage des données utilisateur
 
