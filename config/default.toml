@@ -1,0 +1,27 @@
+[tracteur]
+nom = "Landini"
+moteur = "Perkins A4-212"
+regime_max = 2200          # t/min sous charge
+# Vitesses au sol (km/h) par rapport au régime max, roues 14.9/13-30
+vitesses_max = [
+    1.302, 2.012, 2.543, 3.186, 3.982, 4.918,
+    6.230, 7.847, 9.735, 12.115, 15.346, 23.978
+]
+
+[tracteur.pto]
+regime_nominal = 540       # t/min PTO
+regime_moteur_nominal = 1944  # t/min moteur pour PTO nominale
+pto_min = 500              # t/min PTO minimum autorisé
+pto_max = 560              # t/min PTO maximum autorisé
+
+[pulverisateur]
+nom = "Atomiseur Ø620"
+nombre_buses = 10
+type_buses = "Céramique Ø1.0"
+largeur_travail = 4.0      # mètres (inter-rangs)
+citerne = 200              # litres
+
+# Points d'étalonnage pression (bars) / débit par buse (L/min)
+[pulverisateur.etalonnage]
+pressions = [10.0, 15.0, 20.0, 25.0, 30.0, 40.0, 50.0]
+debits_par_buse = [1.88, 2.15, 2.45, 2.72, 2.96, 3.37, 3.70]

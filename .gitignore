@@ -1,0 +1,23 @@
+# Build artefacts
+/target
+
+# Outils Claude Code (locaux)
+/.claude/
+
+# Méthodologie BMad et livrables internes
+/_bmad/
+/_bmad-output/
+/design-artifacts/
+
+# Manuels manufacturier (copyright)
+/docs/Pulvérisateur/
+/docs/Tracteur/
+/docs/produits/
+*.pdf
+
+# Fichiers OS / éditeur
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
